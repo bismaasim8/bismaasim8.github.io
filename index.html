@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Web Developer</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #090d16;
+      color: #f4f5fb;
+      line-height: 1.7;
+    }
+    header {
+      padding: 20px 8%;
+      border-bottom: 1px solid #283247;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .logo { color: #a78bfa; font-size: 22px; font-weight: bold; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: #c4c9d6; text-decoration: none; }
+    nav a:hover { color: #a78bfa; }
+    .hero {
+      padding: 110px 8%;
+      background: radial-gradient(ellipse at top right, #302052, #090d16 65%);
+    }
+    .hero small { color: #a78bfa; letter-spacing: 3px; }
+    h1 { font-size: clamp(38px, 7vw, 70px); line-height: 1.2; margin: 15px 0; }
+    h1 span, h2 span { color: #a78bfa; }
+    p { color: #b3bdd0; }
+    .hero p { max-width: 570px; }
+    .button {
+      display: inline-block;
+      margin: 22px 10px 0 0;
+      padding: 11px 20px;
+      background: #a78bfa;
+      color: #100b20;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section { padding: 75px 8%; }
+    h2 { font-size: 32px; margin-bottom: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #283247;
+      padding: 24px;
+      border-radius: 14px;
+    }
+    .card h3 { margin-bottom: 10px; color: #c4b5fd; }
+    .card p { margin-bottom: 14px; }
+    .tag { color: #c4b5fd; font-size: 13px; }
+    .contact { text-align: center; }
+    footer {
+      border-top: 1px solid #283247;
+      text-align: center;
+      padding: 22px;
+      color: #b3bdd0;
+    }
+    @media (max-width: 500px) {
+      header { padding: 18px 5%; }
+      nav { gap: 12px; }
+      section, .hero { padding: 60px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MyPortfolio.</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <small>HELLO WORLD, I'M</small>
+      <h1>Your Name<br><span>Web Developer.</span></h1>
+      <p>I create modern, responsive and user-friendly websites.
+      Welcome to my personal portfolio!</p>
+      <a class="button" href="#projects">Explore My Work ↗</a>
+      <a class="button" href="#contact">Contact Me</a>
+    </div>
+
+    <section id="about">
+      <h2>About <span>Me</span></h2>
+      <div class="card">
+        <p>Hi! I'm an aspiring web developer passionate about
+        technology, creative design and building useful websites.
+        I'm always learning new skills and improving my work.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>My <span>Skills</span></h2>
+      <div class="grid">
+        <div class="card"><h3>HTML</h3><p>Building webpage structure.</p></div>
+        <div class="card"><h3>CSS</h3><p>Designing beautiful layouts.</p></div>
+        <div class="card"><h3>JavaScript</h3><p>Creating interactive websites.</p></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My <span>Projects</span></h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A personal website to introduce myself and showcase my work.</p>
+          <span class="tag">HTML · CSS</span>
+        </div>
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>A modern landing page concept with a clean, responsive design.</p>
+          <span class="tag">HTML · CSS</span>
+        </div>
+        <div class="card">
+          <h3>My Next Project</h3>
+          <p>More exciting projects coming soon!</p>
+          <span class="tag">Learning · Building</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>My <span>Resume</span></h2>
+      <div class="card">
+        <p>You can add your CV here once you upload your resume PDF.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let's Work <span>Together!</span></h2>
+      <p>Have an opportunity or project in mind? Get in touch!</p>
+      <a class="button" href="mailto:your.email@example.com">Email Me ↗</a>
+      <p style="margin-top:15px">GitHub · LinkedIn links can be added here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with care by Your Name · © <span id="year"></span></p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
